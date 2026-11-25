@@ -168,7 +168,9 @@ with fila2_col2:
       for t in trims_ordenados
   ]
 
-  box = ax4.boxplot(datos_box, labels=trims_ordenados, patch_artist=True)
+box = ax4.boxplot(
+       datos_box, tick_labels=trims_ordenados, patch_artist=True
+   )
   for patch, color in zip(box["boxes"], PALETA * 2):
     patch.set_facecolor(color)
 
